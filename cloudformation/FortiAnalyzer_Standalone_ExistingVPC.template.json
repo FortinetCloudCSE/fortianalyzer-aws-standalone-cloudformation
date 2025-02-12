@@ -1,6 +1,6 @@
 {
 	"AWSTemplateFormatVersion": "2010-09-09",
-	"Description": "(v6.0) AWS CFT to deploy a standalone FortiAnalyzer into an existing VPC",
+	"Description": "(v7.2) AWS CFT to deploy a standalone FortiAnalyzer into an existing VPC",
 	"Metadata": {
 		"AWS::CloudFormation::Interface": {
 			"ParameterGroups": [
@@ -125,10 +125,9 @@
 		},
 		"FortiAnalyzerVersion": {
 			"Type": "String",
-			"Default": "7.2.x",
+			"Default": "7.4.x",
 			"Description": "Select the verion of FortiAnalyzer to use (latest GA AMI will be used)",
 			"AllowedValues": [
-				"6.4.x",
 				"7.0.x",
 				"7.2.x",
 				"7.4.x"
@@ -158,41 +157,32 @@
 	},
 	"Mappings": {
 		"FortiAnalyzerAMISearchString": {
-			"6.4.x": {
-				"BYOL": "FortiAnalyzer VM64-AWS *(6.4.*)*|9ipdy7tpkp24kmfsjgfuymny1",
-				"Flex": "FortiAnalyzer VM64-AWS *(6.4.*)*|9ipdy7tpkp24kmfsjgfuymny1",
-				"PAYG2Devices": "FortiAnalyzer VM64-AWSOnDemand *(6.4.*)*|9dtuu71e8jl604ce11efi1mzo",
-				"PAYG10Devices": "FortiAnalyzer VM64-AWSOnDemand *(6.4.*)*|5fjrlla50pzzq1c8064gnm11n",
-				"PAYG30Devices": "FortiAnalyzer VM64-AWSOnDemand *(6.4.*)*|f260v7j9fwdvlcsbnpsjpaozc",
-				"PAYG100Devices": "FortiAnalyzer VM64-AWSOnDemand *(6.4.*)*|3nlrca0hphlsq7bl6v99smx10",
-				"PAYG500Devices": "FortiAnalyzer VM64-AWSOnDemand *(6.4.*)*|dlwisgg79vzzo3zeommthp0zv"
-			},
 			"7.0.x": {
-				"BYOL": "FortiAnalyzer VM64-AWS *(7.0.*)*|9ipdy7tpkp24kmfsjgfuymny1",
-				"Flex": "FortiAnalyzer VM64-AWS *(7.0.*)*|9ipdy7tpkp24kmfsjgfuymny1",
-				"PAYG2Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.0.*)*|9dtuu71e8jl604ce11efi1mzo",
-				"PAYG10Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.0.*)*|5fjrlla50pzzq1c8064gnm11n",
-				"PAYG30Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.0.*)*|f260v7j9fwdvlcsbnpsjpaozc",
-				"PAYG100Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.0.*)*|3nlrca0hphlsq7bl6v99smx10",
-				"PAYG500Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.0.*)*|dlwisgg79vzzo3zeommthp0zv"
+				"BYOL": "FortiAnalyzer-VM64-AWS *(7.0.*)*|9ipdy7tpkp24kmfsjgfuymny1",
+				"Flex": "FortiAnalyzer-VM64-AWS *(7.0.*)*|9ipdy7tpkp24kmfsjgfuymny1",
+				"PAYG2Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.0.*)*|9dtuu71e8jl604ce11efi1mzo",
+				"PAYG10Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.0.*)*|5fjrlla50pzzq1c8064gnm11n",
+				"PAYG30Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.0.*)*|f260v7j9fwdvlcsbnpsjpaozc",
+				"PAYG100Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.0.*)*|3nlrca0hphlsq7bl6v99smx10",
+				"PAYG500Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.0.*)*|dlwisgg79vzzo3zeommthp0zv"
 			},
 			"7.2.x": {
-				"BYOL": "FortiAnalyzer VM64-AWS *(7.2.*)*|9ipdy7tpkp24kmfsjgfuymny1",
-				"Flex": "FortiAnalyzer VM64-AWS *(7.2.*)*|9ipdy7tpkp24kmfsjgfuymny1",
-				"PAYG2Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.2.*)*|9dtuu71e8jl604ce11efi1mzo",
-				"PAYG10Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.2.*)*|5fjrlla50pzzq1c8064gnm11n",
-				"PAYG30Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.2.*)*|f260v7j9fwdvlcsbnpsjpaozc",
-				"PAYG100Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.2.*)*|3nlrca0hphlsq7bl6v99smx10",
-				"PAYG500Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.2.*)*|dlwisgg79vzzo3zeommthp0zv"
+				"BYOL": "FortiAnalyzer-VM64-AWS *(7.2.*)*|9ipdy7tpkp24kmfsjgfuymny1",
+				"Flex": "FortiAnalyzer-VM64-AWS *(7.2.*)*|9ipdy7tpkp24kmfsjgfuymny1",
+				"PAYG2Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.2.*)*|9dtuu71e8jl604ce11efi1mzo",
+				"PAYG10Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.2.*)*|5fjrlla50pzzq1c8064gnm11n",
+				"PAYG30Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.2.*)*|f260v7j9fwdvlcsbnpsjpaozc",
+				"PAYG100Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.2.*)*|3nlrca0hphlsq7bl6v99smx10",
+				"PAYG500Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.2.*)*|dlwisgg79vzzo3zeommthp0zv"
 			},
 			"7.4.x": {
-				"BYOL": "FortiAnalyzer VM64-AWS *(7.4.*)*|9ipdy7tpkp24kmfsjgfuymny1",
-				"Flex": "FortiAnalyzer VM64-AWS *(7.4.*)*|9ipdy7tpkp24kmfsjgfuymny1",
-				"PAYG2Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.4.*)*|9dtuu71e8jl604ce11efi1mzo",
-				"PAYG10Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.4.*)*|5fjrlla50pzzq1c8064gnm11n",
-				"PAYG30Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.4.*)*|f260v7j9fwdvlcsbnpsjpaozc",
-				"PAYG100Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.4.*)*|3nlrca0hphlsq7bl6v99smx10",
-				"PAYG500Devices": "FortiAnalyzer VM64-AWSOnDemand *(7.4.*)*|dlwisgg79vzzo3zeommthp0zv"
+				"BYOL": "FortiAnalyzer-VM64-AWS *(7.4.*)*|9ipdy7tpkp24kmfsjgfuymny1",
+				"Flex": "FortiAnalyzer-VM64-AWS *(7.4.*)*|9ipdy7tpkp24kmfsjgfuymny1",
+				"PAYG2Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.4.*)*|9dtuu71e8jl604ce11efi1mzo",
+				"PAYG10Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.4.*)*|5fjrlla50pzzq1c8064gnm11n",
+				"PAYG30Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.4.*)*|f260v7j9fwdvlcsbnpsjpaozc",
+				"PAYG100Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.4.*)*|3nlrca0hphlsq7bl6v99smx10",
+				"PAYG500Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.4.*)*|dlwisgg79vzzo3zeommthp0zv"
 			}
 		}
 	},
@@ -298,11 +288,23 @@
 									"Resource": "*"
 								},
 								{
+									"Sid": "FazHA7mr4p2orNewer",
+									"Effect": "Allow",
+									"Action": [
+										"ec2:AssignPrivateIpAddresses",
+										"ec2:DescribeSubnets",
+										"ec2:DescribeNetworkInterfaces",
+										"ec2:DescribeAddresses",
+										"ec2:AssociateAddress",
+										"ec2:CreateTags"
+									],
+									"Resource": "*"
+								},
+								{
 									"Sid": "SDNConnectorFortiView",
 									"Effect": "Allow",
 									"Action": [
 										"ec2:DescribeInstances",
-										"ec2:DescribeNetworkInterfaces",
 										"ec2:DescribeRegions",
 										"ec2:DescribeVpcEndpoints",
 										"eks:DescribeCluster",

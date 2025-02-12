@@ -35,8 +35,6 @@ If the FAZ is deployed into a public subnet, this hould have a default route to 
 If the FAZ is deployed into a private subnet, this subnet should have a S3 Gateway endpoint associated to the subnet's route table.  Otherwise, provide the relevant route table ID and the template will deploy a S3 gateway endpoint for you.  Reference [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html) for further information.
 {{< /notice >}}
 
-Reference [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html) for further information.
-
 ![](deploy4.png)
 
 6.  In the FortiAnalyzer Instance Configuration parameters section, we have selected an Instance Type and Key Pair to use, chose to encrypt both OS and Log disks, as well as Flex licensing.  Notice we are prompted for the licensing type which we are going with tokens.  In our case we do not need to fill out the InitS3Bucket parameter.
