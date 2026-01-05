@@ -1,6 +1,6 @@
 {
 	"AWSTemplateFormatVersion": "2010-09-09",
-	"Description": "(v7.2) AWS CFT to deploy a standalone FortiAnalyzer into an existing VPC",
+	"Description": "(v7.3) AWS CFT to deploy a standalone FortiAnalyzer into an existing VPC",
 	"Metadata": {
 		"AWS::CloudFormation::Interface": {
 			"ParameterGroups": [
@@ -128,9 +128,9 @@
 			"Default": "7.4.x",
 			"Description": "Select the verion of FortiAnalyzer to use (latest GA AMI will be used)",
 			"AllowedValues": [
-				"7.0.x",
 				"7.2.x",
-				"7.4.x"
+				"7.4.x",
+				"7.6.x"
 			]
 		},
 		"LicenseType": {
@@ -157,15 +157,6 @@
 	},
 	"Mappings": {
 		"FortiAnalyzerAMISearchString": {
-			"7.0.x": {
-				"BYOL": "FortiAnalyzer-VM64-AWS *(7.0.*)*|9ipdy7tpkp24kmfsjgfuymny1",
-				"Flex": "FortiAnalyzer-VM64-AWS *(7.0.*)*|9ipdy7tpkp24kmfsjgfuymny1",
-				"PAYG2Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.0.*)*|9dtuu71e8jl604ce11efi1mzo",
-				"PAYG10Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.0.*)*|5fjrlla50pzzq1c8064gnm11n",
-				"PAYG30Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.0.*)*|f260v7j9fwdvlcsbnpsjpaozc",
-				"PAYG100Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.0.*)*|3nlrca0hphlsq7bl6v99smx10",
-				"PAYG500Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.0.*)*|dlwisgg79vzzo3zeommthp0zv"
-			},
 			"7.2.x": {
 				"BYOL": "FortiAnalyzer-VM64-AWS *(7.2.*)*|9ipdy7tpkp24kmfsjgfuymny1",
 				"Flex": "FortiAnalyzer-VM64-AWS *(7.2.*)*|9ipdy7tpkp24kmfsjgfuymny1",
@@ -183,6 +174,15 @@
 				"PAYG30Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.4.*)*|f260v7j9fwdvlcsbnpsjpaozc",
 				"PAYG100Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.4.*)*|3nlrca0hphlsq7bl6v99smx10",
 				"PAYG500Devices": "FortiAnalyzer-VM64-AWSOnDemand *(7.4.*)*|dlwisgg79vzzo3zeommthp0zv"
+			},
+			"7.6.x": {
+				"BYOL": "FortiAnalyzer-VM64-AWS *(7.6.*)*|9ipdy7tpkp24kmfsjgfuymny1",
+				"Flex": "FortiAnalyzer-VM64-AWS *(7.6.*)*|9ipdy7tpkp24kmfsjgfuymny1",
+				"PAYG2Devices": "FortiAnalyzer-VM64-AWSONDEMAND *(7.6.*)*|9dtuu71e8jl604ce11efi1mzo",
+				"PAYG10Devices": "FortiAnalyzer-VM64-AWSONDEMAND *(7.6.*)*|5fjrlla50pzzq1c8064gnm11n",
+				"PAYG30Devices": "FortiAnalyzer-VM64-AWSONDEMAND *(7.6.*)*|f260v7j9fwdvlcsbnpsjpaozc",
+				"PAYG100Devices": "FortiAnalyzer-VM64-AWSONDEMAND *(7.6.*)*|3nlrca0hphlsq7bl6v99smx10",
+				"PAYG500Devices": "FortiAnalyzer-VM64-AWSONDEMAND *(7.6.*)*|dlwisgg79vzzo3zeommthp0zv"
 			}
 		}
 	},
