@@ -7,6 +7,7 @@ weight: 20
 Before attempting to create a stack with the template, a few prerequisites should be checked to ensure a successful deployment:
 1.	An AMI subscription must be active for the FortiAnalyzer license type being used in the template.
     * [**BYOL Marketplace Listing**](https://aws.amazon.com/marketplace/pp/prodview-6dt7z5twj7t7a)
+    * [**PAYG SCALE Marketplace Listing**](https://aws.amazon.com/marketplace/pp/prodview-wy43e3tw4wm3e)
     * [**PAYG (Max 2 Devices) Marketplace Listing**](https://aws.amazon.com/marketplace/pp/prodview-h2lf6do2y4y4g)
     * [**PAYG (Max 10 Devices) Marketplace Listing**](https://aws.amazon.com/marketplace/pp/prodview-wabutfmgsmt4s)
     * [**PAYG (Max 30 Devices) Marketplace Listing**](https://aws.amazon.com/marketplace/pp/prodview-cnr3vweexbiro)
